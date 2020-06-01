@@ -22,7 +22,6 @@ const walkPath = function (path, pathNumber) {
       distance++;
       const tile = `${row},${column}`;
       if (this.walkedTiles.has(tile) && this.walkedTiles.get(tile)[0] !== pathNumber) {
-        // this.intersections.add(tile);
         this.intersectionDistances.add(distance + this.walkedTiles.get(tile)[1])
       }
       this.walkedTiles.set(tile, [pathNumber, distance]);
